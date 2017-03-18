@@ -2607,7 +2607,7 @@ const WOLFSSL_EVP_CIPHER *wolfSSL_EVP_get_cipherbyname(const char *name)
         {"AES-256-CBC", "aes256"},
         { NULL, NULL}
     };
-
+ 
     const struct cipher *ent ;
     const struct alias  *al ;
 
