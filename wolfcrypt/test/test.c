@@ -5329,7 +5329,9 @@ byte GetEntropy(ENTROPY_CMD cmd, byte* out)
         static const char* eccPubKeyDerFile = CERT_PREFIX "ecc-public-key.der";
     #endif
     #if defined(WOLFSSL_CERT_GEN) || defined(WOLFSSL_KEY_GEN)
+        #if (defined(HAVE_ECC) && !defined(USE_CERT_BUFFERS_256)) && defined(OPENSSL_EXTRA)
         static const char* eccCaKeyFile  = CERT_ROOT   "ecc-key.der";
+        #endif
         static const char* eccCaKeyTemp  = CERT_PREFIX "ecc-key.der";
     #endif
     #if defined(WOLFSSL_CERT_GEN) || \
