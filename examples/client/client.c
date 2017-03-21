@@ -543,7 +543,7 @@ THREAD_RETURN WOLFSSL_THREAD client_test(void* args)
     WOLFSSL_SESSION* session = 0;
 
 #ifndef WOLFSSL_ALT_TEST_STRINGS
-    char msg[32] = "hello wolfssl!";   /* GET may make bigger */
+    char msg[32] = "hello!";   /* GET may make bigger */
     char resumeMsg[32] = "resuming wolfssl!";
 #else
     char msg[32] = "hello wolfssl!\n";
